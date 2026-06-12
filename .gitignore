@@ -10,7 +10,7 @@ __pycache__/
 *.pyd
 
 # Variables de entorno
-.env
+*.env
 
 # Archivos de VS Code
 .vscode/
