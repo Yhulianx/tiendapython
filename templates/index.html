@@ -1,54 +1,133 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="es">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone</title>
 
-    <title>Sistema Tienda</title>
-
-    <link rel="stylesheet"
+```
+<link rel="stylesheet"
     href="{{ url_for('static', filename='style.css') }}">
+```
 
 </head>
 
 <body>
 
-    <h1>Bienvenido al Sistema</h1>
+```
+<div class="barra-superior">
+    Mejora tu experiencia tecnológica
+</div>
+
+<header>
+
+    <div class="logo">
+        TECHZONE
+    </div>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+        <a href="/login" class="login-btn">
+            Iniciar Sesión
+        </a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>TECNOLOGÍA DE ÚLTIMA GENERACIÓN</h1>
 
     <p>
-        Usuario:
-        {{ session["correo"] }}
+        Descubre teclados, mouse, audífonos,
+        monitores y smartphones de alto rendimiento.
     </p>
 
-    <a href="/logout">
-        Cerrar Sesión
+    <a href="#productos" class="btn-principal">
+        Ver Productos
     </a>
 
-    <hr>
+</section>
 
-    <div class="contenedor-cards">
+<section class="categorias">
 
-        <a href="/registrar-producto" class="card">
+    <h2>Categorías</h2>
 
-            <h2>Registrar Productos</h2>
+    <div class="contenedor-categorias">
 
-            <p>
-                Permite agregar nuevos productos
-                al sistema.
-            </p>
+        <div class="categoria">
+            <h3>🖱 Mouse Gamer</h3>
+        </div>
 
-        </a>
+        <div class="categoria">
+            <h3>⌨️ Teclados RGB</h3>
+        </div>
 
-        <a href="/ver-productos" class="card">
+        <div class="categoria">
+            <h3>🎧 Audífonos</h3>
+        </div>
 
-            <h2>Ver Productos</h2>
+        <div class="categoria">
+            <h3>🖥 Monitores</h3>
+        </div>
 
-            <p>
-                Permite visualizar todos los
-                productos registrados.
-            </p>
-
-        </a>
+        <div class="categoria">
+            <h3>📱 Smartphones</h3>
+        </div>
 
     </div>
 
+</section>
+
+<section id="productos" class="productos">
+
+    <h2>Productos Destacados</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="producto-card">
+            <img src="https://placehold.co/300x220" alt="">
+            <h3>Mouse Pro X</h3>
+            <p>Bs. 250</p>
+        </div>
+
+        <div class="producto-card">
+            <img src="https://placehold.co/300x220" alt="">
+            <h3>Teclado RGB</h3>
+            <p>Bs. 450</p>
+        </div>
+
+        <div class="producto-card">
+            <img src="https://placehold.co/300x220" alt="">
+            <h3>Monitor 144Hz</h3>
+            <p>Bs. 1800</p>
+        </div>
+
+        <div class="producto-card">
+            <img src="https://placehold.co/300x220" alt="">
+            <h3>Audífonos Pro</h3>
+            <p>Bs. 350</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 TechZone - Tienda Tecnológica
+    </p>
+
+</footer>
+```
+
 </body>
+
 </html>

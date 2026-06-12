@@ -16,11 +16,8 @@ os.makedirs(CARPETA, exist_ok=True)
 
 @app.route("/")
 def inicio():
-
-    if "correo" not in session:
-        return redirect("/login")
-
     return render_template("index.html")
+
 
 
 @app.route("/guardar", methods=["POST"])
