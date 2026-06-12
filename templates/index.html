@@ -1,54 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
+<header class="navbar">
+    <div class="logo">TIENDA</div>
 
-    <title>Sistema Tienda</title>
+    <nav class="nav-menu">
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+<section class="hero-banner">
+    <div class="hero-content">
+        <h1>REDEFINE TU JUEGO</h1>
+        <p>Equipamiento profesional gamer</p>
+        <a href="#" class="btn-primary">Ver más</a>
+    </div>
+</section>
 
-</head>
+<section class="featured-products">
 
-<body>
-
-    <h1>Bienvenido al Sistema</h1>
-
-    <p>
-        Usuario:
-        {{ session["correo"] }}
-    </p>
-
-    <a href="/logout">
-        Cerrar Sesión
-    </a>
-
-    <hr>
-
-    <div class="contenedor-cards">
-
-        <a href="/registrar-producto" class="card">
-
-            <h2>Registrar Productos</h2>
-
-            <p>
-                Permite agregar nuevos productos
-                al sistema.
-            </p>
-
-        </a>
-
-        <a href="/ver-productos" class="card">
-
-            <h2>Ver Productos</h2>
-
-            <p>
-                Permite visualizar todos los
-                productos registrados.
-            </p>
-
-        </a>
-
+    <div class="product-card">
+        <img src="">
+        <h3>Teclado RGB</h3>
+        <span>Bs. 350</span>
     </div>
 
-</body>
-</html>
+</section>
+
+<footer class="footer">
+    Copyright 2026
+</footer>
