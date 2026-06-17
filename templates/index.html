@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
@@ -6,42 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechZone</title>
 
-    <link rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
 
-    <header>
+<div class="top-bar"></div>
 
-        <div class="logo">
-            TECHZONE
-        </div>
+<header>
 
-        <a href="/login" class="btn-login">
+    <div class="logo">
+        MEY Zone
+    </div>
+
+    <a href="/login" class="btn-login">
         Iniciar Sesión
-        </a>   
+    </a>
 
-    </header>
+</header>
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <h1>
-                TECNOLOGÍA DEL FUTURO
-            </h1>
+        <span class="subtitulo">
+            TECNOLOGÍA PREMIUM
+        </span>
 
-            <p>
-                Descubre los mejores productos tecnológicos,
-                dispositivos premium y accesorios de última generación.
-            </p>
+        <h1>
+            La mejor tecnologoia con la mejor empresa
+        </h1>
 
             <a href="/login" class="btn-explorar"> Explorar</a>
 
-        </div>
+        <a href="#" class="btn-principal">
+            Explorar Tienda
+        </a>
 
-    </section>
+    </div>
+
+</section>
 
 </body>
 
