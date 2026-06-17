@@ -6,48 +6,63 @@
 }
 
 body{
-    background:white;
+    overflow-x:hidden;
 }
 
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
+/* Barra superior */
+.top-bar{
+    height:8px;
+    background:linear-gradient(
+        90deg,
+        #000,
+        #444,
+        #000
+    );
+}
 
+/* Header */
+header{
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 60px;
+    padding:25px 70px;
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 .logo{
-    font-size:32px;
-    font-weight:bold;
-    color:black;
-    letter-spacing:2px;
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#111;
 }
 
 .btn-login{
     text-decoration:none;
-
-    background:black;
     color:white;
+
+    background:#111;
 
     padding:12px 24px;
 
-    border-radius:8px;
+    border-radius:10px;
 
-    transition:0.3s;
+    transition:.3s;
 }
 
 .btn-login:hover{
-    background:#333;
+    transform:translateY(-2px);
 }
 
+/* Landing principal */
 .hero{
-    height:100vh;
+    height:calc(100vh - 80px);
 
     display:flex;
     justify-content:center;
@@ -58,31 +73,34 @@ header{
     background:
     linear-gradient(
         135deg,
-        #ffffff,
-        #f3f3f3,
-        #d9d9d9
+        #ffffff 0%,
+        #f8f9fc 35%,
+        #eef2f7 70%,
+        #ffffff 100%
     );
 }
 
 .hero-content{
-    max-width:800px;
+    max-width:850px;
 }
 
 .hero-content h1{
-    font-size:80px;
-    color:black;
+    font-size:90px;
+    color:#111;
 
     margin-bottom:25px;
+
+    letter-spacing:2px;
 }
 
 .hero-content p{
     font-size:24px;
 
-    color:#444;
+    color:#555;
+
+    line-height:1.7;
 
     margin-bottom:40px;
-
-    line-height:1.6;
 }
 
 .btn-principal{
@@ -90,18 +108,16 @@ header{
 
     text-decoration:none;
 
-    background:black;
     color:white;
+    background:#111;
 
-    padding:16px 35px;
+    padding:16px 36px;
 
-    border-radius:10px;
+    border-radius:12px;
 
-    font-size:18px;
-
-    transition:0.3s;
+    transition:.3s;
 }
 
 .btn-principal:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
