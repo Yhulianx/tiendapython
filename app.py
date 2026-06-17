@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, flash, session
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-from conexion import conexion, cursor
+# from conexion import conexion, cursor
 import os
 
 app = Flask(__name__)
@@ -164,35 +164,3 @@ def ver_productos():
 if __name__=="__main__":
     app.run(debug=True)
 
-from flask import Flask, render_template, request, redirect, url_for
-
-app = Flask(__name__)
-
-@app.route("/")
-def inicio():
-    return render_template("index.html")
-
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-@app.route("/validar_login", methods=["POST"])
-def validar_login():
-
-    usuario = request.form["usuario"]
-    correo = request.form["correo"]
-    password = request.form["password"]
-
-    # Datos temporales del administrador
-    if (
-        usuario == "admin"
-        and correo == "admin@gmail.com"
-        and password == "123456"
-    ):
-        return "Bienvenido Administrador"
-
-    return "Datos incorrectos"
-
-if __name__ == "__main__":
-    app.run(debug=True)
-    
