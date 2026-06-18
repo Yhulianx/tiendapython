@@ -1,9 +1,4 @@
 from flask import Flask, render_template, request, redirect, flash, session
-from werkzeug.utils import secure_filename
-from werkzeug.security import generate_password_hash, check_password_hash
-
-# from conexion import conexion, cursor
-
 import os
 
 app = Flask(__name__)
@@ -80,60 +75,27 @@ def ver_productos():
 
 
 # =========================
-# FUNCIONES MYSQL (PAUSADAS)
+# GUARDADO TEMPORAL
 # =========================
 
-"""
 @app.route("/guardar", methods=["POST"])
 def guardar():
+
+    if "correo" not in session:
+        return redirect("/login")
 
     nombre = request.form["nombre"]
     precio = request.form["precio"]
     stock = request.form["stock"]
 
-    imagen = request.files["imagen"]
+    print("Producto:")
+    print(nombre)
+    print(precio)
+    print(stock)
 
-    nombre_imagen = ""
-
-    if imagen and imagen.filename != "":
-        nombre_imagen = secure_filename(imagen.filename)
-        ruta = os.path.join(app.config["UPLOAD_FOLDER"], nombre_imagen)
-        imagen.save(ruta)
-
-    sql = '''
-    INSERT INTO productos(nombre, precio, stock, imagen)
-    VALUES(%s, %s, %s, %s)
-    '''
-
-    valores = (nombre, precio, stock, nombre_imagen)
-
-    cursor.execute(sql, valores)
-    conexion.commit()
-
-    flash("Producto guardado correctamente")
+    flash("Producto registrado correctamente")
 
     return redirect("/registrar-producto")
-
-
-@app.route("/crear-admin")
-def crear_admin():
-
-    correo = "admin@gmail.com"
-    clave = generate_password_hash("123456")
-    rol = "Administrador"
-
-    sql = '''
-    INSERT INTO usuarios(correo, clave, rol)
-    VALUES(%s, %s, %s)
-    '''
-
-    valores = (correo, clave, rol)
-
-    cursor.execute(sql, valores)
-    conexion.commit()
-
-    return "Administrador creado correctamente"
-"""
 
 
 if __name__ == "__main__":
