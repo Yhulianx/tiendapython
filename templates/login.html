@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión | MEY Zone</title>
+    <title>Iniciar Sesión | TECH Zone</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
@@ -16,14 +16,22 @@
 
         <div class="logo-login">
             <img src="{{ url_for('static', filename='logo.png') }}"
-                 alt="MEY Zone Logo">
+                 alt="TECH Zone Logo">
         </div>
 
-        <h2>Bienvenido a MEY Zone</h2>
+        <h2>TECH Zone</h2>
 
         <p class="texto-login">
             Inicia sesión para acceder al panel administrativo
         </p>
+
+        {% with mensajes = get_flashed_messages() %}
+            {% if mensajes %}
+                <div class="mensaje-error">
+                    {{ mensajes[0] }}
+                </div>
+            {% endif %}
+        {% endwith %}
 
         <form action="/login" method="POST">
 
