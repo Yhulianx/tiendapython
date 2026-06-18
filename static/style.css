@@ -153,6 +153,8 @@ header::after{
    HERO
 ========================= */
 
+/* HERO */
+
 .hero{
     height:calc(100vh - 95px);
 
@@ -162,14 +164,13 @@ header::after{
 
     text-align:center;
 
-    padding:20px;
+    padding:60px 20px;
 }
 
 .hero-content{
     max-width:950px;
+    overflow:visible;
 }
-
-/* Subtítulo */
 
 .subtitulo{
     color:#6d6d6d;
@@ -179,16 +180,16 @@ header::after{
     letter-spacing:4px;
 }
 
-/* Título principal */
-
 .hero-content h1{
     margin-top:20px;
 
     font-size:90px;
 
-    line-height:1.05;
+    line-height:1.2;
 
     font-weight:800;
+
+    padding-bottom:15px;
 
     background:linear-gradient(
         90deg,
@@ -200,8 +201,6 @@ header::after{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
-
-/* Texto */
 
 .hero-content p{
     margin-top:25px;
@@ -217,7 +216,6 @@ header::after{
     margin-left:auto;
     margin-right:auto;
 }
-
 /* =========================
    BOTÓN PRINCIPAL
 ========================= */
@@ -225,7 +223,7 @@ header::after{
 .btn-principal{
     display:inline-block;
 
-    margin-top:40px;
+    margin-top:50px;
 
     text-decoration:none;
 
