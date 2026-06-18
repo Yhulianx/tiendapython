@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, flash, session
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-from conexion import conexion, cursor
+# from conexion import conexion, cursor
 import os
 
 app = Flask(__name__)
@@ -163,3 +163,4 @@ def ver_productos():
     )
 if __name__=="__main__":
     app.run(debug=True)
+
