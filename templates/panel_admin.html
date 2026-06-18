@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Administrador | MEY Zone</title>
+    <title>Panel Administrativo | MEY Zone</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <div class="panel-admin">
+    <div class="panel-container">
 
-        <h1>Panel de Administración</h1>
+        <div class="panel-header">
 
-        <p>
-            Bienvenido al sistema de gestión de productos.
-        </p>
+            <div>
+                <h1>Panel Administrativo</h1>
+                <p>Bienvenido a MEY Zone</p>
+            </div>
 
-        <div class="panel-botones">
-
-            <a href="/registrar-producto" class="btn-panel">
-                Agregar Producto
-            </a>
-
-            <a href="/ver-productos" class="btn-panel">
-                Ver Productos
-            </a>
-
-            <a href="/logout" class="btn-panel salir">
+            <a href="/logout" class="btn-salir">
                 Cerrar Sesión
+            </a>
+
+        </div>
+
+        <div class="panel-cards">
+
+            <a href="/registrar-producto" class="panel-card">
+
+                <h2>📦</h2>
+
+                <h3>Registrar Producto</h3>
+
+                <p>
+                    Agrega nuevos celulares, laptops,
+                    tablets y accesorios.
+                </p>
+
+            </a>
+
+            <a href="/ver-productos" class="panel-card">
+
+                <h2>📋</h2>
+
+                <h3>Ver Productos</h3>
+
+                <p>
+                    Consulta y administra los productos
+                    registrados.
+                </p>
+
             </a>
 
         </div>
