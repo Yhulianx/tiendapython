@@ -73,10 +73,20 @@ def guardar():
     precio = request.form["precio"]
     stock = request.form["stock"]
 
+    archivo = request.files.get("imagen")
+
+    nombre_archivo = None
+
+    if archivo and archivo.filename != "":
+        nombre_archivo = archivo.filename
+        ruta = os.path.join(app.config["UPLOAD_FOLDER"], nombre_archivo)
+        archivo.save(ruta)
+
     productos.append({
         "nombre": nombre,
         "precio": precio,
-        "stock": stock
+        "stock": stock,
+        "imagen": nombre_archivo
     })
 
     flash("Producto registrado correctamente")
