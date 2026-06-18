@@ -662,3 +662,92 @@ header{
     color:#666;
     line-height:1.6;
 }
+/* ================= VER PRODUCTOS ================= */
+
+.productos-container{
+    width:90%;
+    max-width:1300px;
+    margin:50px auto;
+}
+
+.productos-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.productos-header h1{
+    font-size:42px;
+    color:#111;
+}
+
+.btn-volver{
+    text-decoration:none;
+    background:#111;
+    color:white;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-volver:hover{
+    transform:translateY(-2px);
+    background:#222;
+}
+
+.buscador-box{
+    margin-bottom:25px;
+}
+
+#buscador{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    font-size:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.tabla-container{
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#111;
+    color:white;
+}
+
+th{
+    padding:18px;
+    text-align:center;
+}
+
+td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.5);
+}
+
+.img-producto{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+}

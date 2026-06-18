@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 
-    <title>Ver Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ver Productos | TECH Zone</title>
 
     <link rel="stylesheet"
     href="{{ url_for('static', filename='style.css') }}">
@@ -11,64 +14,84 @@
 
 <body>
 
-    <h1>Productos Registrados</h1>
+    <div class="productos-container">
 
-    <a href="panel_admin.html">Volver al inicio</a>
+        <div class="productos-header">
 
-    <hr>
+            <h1>Productos Registrados</h1>
 
-    <div class="contenedor-tabla">
+            <a href="/panel-admin" class="btn-volver">
+                Volver al Panel
+            </a>
 
-        <input 
-            type="text"
-            id="buscador"
-            placeholder="Buscar producto..."
-        >
+        </div>
 
-        <table border="1">
+        <div class="buscador-box">
 
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-                <th>Stock</th>
-            </tr>
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar producto..."
+            >
 
-            {% for producto in productos %}
+        </div>
 
-            <tr class="fila-producto">
+        <div class="tabla-container">
 
-                <td>{{ producto[0] }}</td>
+            <table>
 
-                <td>{{ producto[1] }}</td>
+                <thead>
 
-                <td>{{ producto[2] }}</td>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Stock</th>
+                    </tr>
 
-                <td>
+                </thead>
 
-                    {% if producto[3] %}
+                <tbody>
 
-                        <img 
-                        src="{{ url_for('static',
-                        filename='uploads/' + producto[3]) }}"
-                        width="80">
+                    {% for producto in productos %}
 
-                    {% else %}
+                    <tr class="fila-producto">
 
-                        Sin imagen
+                        <td>{{ producto[0] }}</td>
 
-                    {% endif %}
+                        <td>{{ producto[1] }}</td>
 
-                </td>
+                        <td>Bs {{ producto[2] }}</td>
 
-                <td>{{ producto[4] }}</td>
+                        <td>
 
-            </tr>
+                            {% if producto[3] %}
 
-            {% endfor %}
+                            <img
+                                src="{{ url_for('static', filename='uploads/' + producto[3]) }}"
+                                class="img-producto"
+                            >
 
-        </table>
+                            {% else %}
+
+                            Sin imagen
+
+                            {% endif %}
+
+                        </td>
+
+                        <td>{{ producto[4] }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 
