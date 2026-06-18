@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador | MEY Zone</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="panel-admin">
+
+        <h1>Panel de Administración</h1>
+
+        <p>
+            Bienvenido al sistema de gestión de productos.
+        </p>
+
+        <div class="panel-botones">
+
+            <a href="/registrar-producto" class="btn-panel">
+                Agregar Producto
+            </a>
+
+            <a href="/ver-productos" class="btn-panel">
+                Ver Productos
+            </a>
+
+            <a href="/logout" class="btn-panel salir">
+                Cerrar Sesión
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
