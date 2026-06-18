@@ -18,8 +18,16 @@
 
 <header>
 
-    <div class="logo">
-        MEY Zone
+    <div class="logo-container">
+
+        <img src="{{ url_for('static', filename='logo.png') }}"
+             alt="Logo"
+             class="logo-img">
+
+        <h2 class="logo">
+            MEY Zone
+        </h2>
+
     </div>
 
     <a href="/login" class="btn-login">
@@ -37,7 +45,7 @@
         </span>
 
         <h1>
-            La mejor tecnologoia con la mejor empresa
+            La mejor tecnologia con la mejor empresa
         </h1>
 
         <p>
