@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,14 @@
     <div class="login-card">
 
         <div class="logo-login">
-    <img src="{{ url_for('static', filename='logo.png') }}"
-         alt="MEY Zone Logo">
-</div>
+            <img src="{{ url_for('static', filename='logo.png') }}"
+                 alt="MEY Zone Logo">
+        </div>
 
-        <h2>Bienvenido</h2>
+        <h2>Bienvenido a MEY Zone</h2>
 
         <p class="texto-login">
-            Accede al panel de administración
+            Inicia sesión para acceder al panel administrativo
         </p>
 
         <form action="/login" method="POST">
@@ -53,4 +54,5 @@
     </div>
 
 </body>
+
 </html>
