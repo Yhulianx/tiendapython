@@ -2,43 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | MEY Zone</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
 
-    <div class="login-container">
+<body class="login-page">
 
-        <h1>Iniciar Sesión</h1>
+    <div class="login-card">
 
-        <form action="/validar_login" method="POST">
+        <div class="logo-login">
+            MEY ZONE
+        </div>
 
-            <input
-                type="text"
-                name="usuario"
-                placeholder="Usuario"
-                required
-            >
+        <h2>Bienvenido</h2>
+
+        <p class="texto-login">
+            Accede al panel de administración
+        </p>
+
+        <form action="/login" method="POST">
 
             <input
                 type="email"
                 name="correo"
-                placeholder="Correo"
+                placeholder="Correo electrónico"
                 required
             >
 
             <input
                 type="password"
-                name="password"
+                name="clave"
                 placeholder="Contraseña"
                 required
             >
 
             <button type="submit">
-                Ingresar
+                Iniciar Sesión
             </button>
 
         </form>
+
+        <a href="/" class="volver">
+            ← Volver al inicio
+        </a>
 
     </div>
 
