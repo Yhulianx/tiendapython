@@ -5,6 +5,10 @@
     font-family:'Segoe UI',sans-serif;
 }
 
+/* =========================
+   FONDO GENERAL
+========================= */
+
 body{
     min-height:100vh;
 
@@ -12,19 +16,19 @@ body{
 
         radial-gradient(
             circle at 15% 20%,
-            rgba(96,165,250,0.30) 0%,
+            rgba(96,165,250,0.35) 0%,
             transparent 35%
         ),
 
         radial-gradient(
             circle at 85% 15%,
-            rgba(167,139,250,0.28) 0%,
+            rgba(167,139,250,0.32) 0%,
             transparent 35%
         ),
 
         radial-gradient(
             circle at 20% 85%,
-            rgba(56,189,248,0.22) 0%,
+            rgba(56,189,248,0.25) 0%,
             transparent 30%
         ),
 
@@ -36,43 +40,74 @@ body{
 
         radial-gradient(
             circle at 60% 60%,
-            rgba(148,163,184,0.18) 0%,
+            rgba(148,163,184,0.12) 0%,
             transparent 40%
         ),
 
         linear-gradient(
             135deg,
             #ffffff 0%,
-            #f5f7ff 30%,
-            #f8faff 60%,
+            #f4f7ff 35%,
+            #f8faff 65%,
             #ffffff 100%
         );
 
-    background-attachment: fixed;
+    background-attachment:fixed;
 }
+
+/* =========================
+   HEADER
+========================= */
+
 header{
+    position:relative;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     padding:25px 80px;
 
-    background:rgba(255,255,255,0.65);
-
-    backdrop-filter:blur(20px);
-
-    border-bottom:1px solid rgba(0,0,0,0.08);
+    background:transparent;
 }
+
+/* Línea divisora elegante */
+
+header::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(120,120,120,.45),
+        transparent
+    );
+}
+
+/* =========================
+   LOGO
+========================= */
+
 .logo-container{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:14px;
 }
 
 .logo-img{
-    width:50px;
-    height:50px;
+    width:55px;
+    height:55px;
+
     object-fit:contain;
+
     display:block;
 }
 
@@ -80,10 +115,43 @@ header{
     font-size:32px;
     font-weight:700;
     color:#111;
-    margin:0;
+
+    letter-spacing:1px;
 }
 
-/* LANDING */
+/* =========================
+   BOTÓN LOGIN
+========================= */
+
+.btn-login{
+    text-decoration:none;
+
+    background:#111;
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:14px;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.btn-login:hover{
+    background:#222;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     height:calc(100vh - 95px);
@@ -101,6 +169,8 @@ header{
     max-width:950px;
 }
 
+/* Subtítulo */
+
 .subtitulo{
     color:#6d6d6d;
 
@@ -109,15 +179,29 @@ header{
     letter-spacing:4px;
 }
 
+/* Título principal */
+
 .hero-content h1{
     margin-top:20px;
 
-    font-size:85px;
+    font-size:90px;
 
-    line-height:1.1;
+    line-height:1.05;
 
-    color:#111;
+    font-weight:800;
+
+    background:linear-gradient(
+        90deg,
+        #111,
+        #444,
+        #111
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
+
+/* Texto */
 
 .hero-content p{
     margin-top:25px;
@@ -134,6 +218,10 @@ header{
     margin-right:auto;
 }
 
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
 .btn-principal{
     display:inline-block;
 
@@ -149,33 +237,19 @@ header{
     border-radius:14px;
 
     font-size:18px;
+    font-weight:600;
 
     transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .btn-principal:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 
     background:#222;
-}
-.btn-login{
-    text-decoration:none;
-    background:#111;
-    color:white;
 
-    padding:14px 28px;
-
-    border-radius:12px;
-
-    font-size:16px;
-    font-weight:500;
-
-    transition:0.3s ease;
-}
-
-.btn-login:hover{
-    background:#333;
-    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
 }
 /* ================= LOGIN ================= */
 
