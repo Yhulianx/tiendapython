@@ -2,123 +2,92 @@
 <html lang="es">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ver Productos | TECH Zone</title>
+<title>Ver Productos | TECH Zone</title>
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
 <body>
 
-    <div class="productos-container">
+<div class="productos-container">
 
-        <div class="productos-header">
+    <div class="productos-header">
 
-            <h1>Productos Registrados</h1>
+        <h1>Productos Registrados</h1>
 
-            <a href="/panel-admin" class="btn-volver">
-                Volver al Panel
-            </a>
-
-        </div>
-
-        <div class="buscador-box">
-
-            <input
-                type="text"
-                id="buscador"
-                placeholder="Buscar producto..."
-            >
-
-        </div>
-
-        <div class="tabla-container">
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Imagen</th>
-                        <th>Stock</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    {% for producto in productos %}
-
-                    <tr class="fila-producto">
-
-                        <td>{{ producto[0] }}</td>
-
-                        <td>{{ producto[1] }}</td>
-
-                        <td>Bs {{ producto[2] }}</td>
-
-                        <td>
-
-                            {% if producto[3] %}
-
-                            <img
-                                src="{{ url_for('static', filename='uploads/' + producto[3]) }}"
-                                class="img-producto"
-                            >
-
-                            {% else %}
-
-                            Sin imagen
-
-                            {% endif %}
-
-                        </td>
-
-                        <td>{{ producto[4] }}</td>
-
-                    </tr>
-
-                    {% endfor %}
-
-                </tbody>
-
-            </table>
-
-        </div>
+        <a href="/panel-admin" class="btn-volver">
+            Volver al Panel
+        </a>
 
     </div>
 
+    <div class="buscador-box">
+
+        <input type="text" id="buscador" placeholder="Buscar producto...">
+
+    </div>
+
+    <div class="tabla-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for producto in productos %}
+
+                <tr class="fila-producto">
+
+                    <td>{{ loop.index }}</td>
+                    <td>{{ producto["nombre"] }}</td>
+                    <td>Bs {{ producto["precio"] }}</td>
+                    <td>Sin imagen</td>
+                    <td>{{ producto["stock"] }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
 <script>
 
-const buscador = document.getElementById("buscador")
+const buscador = document.getElementById("buscador");
 
 buscador.addEventListener("keyup", function(){
 
-    const texto = buscador.value.toLowerCase()
+    const texto = buscador.value.toLowerCase();
 
-    const filas = document.querySelectorAll(".fila-producto")
+    const filas = document.querySelectorAll(".fila-producto");
 
     filas.forEach(function(fila){
 
-        const contenido = fila.textContent.toLowerCase()
+        const contenido = fila.textContent.toLowerCase();
 
-        if(contenido.includes(texto)){
-            fila.style.display = ""
-        }
-        else{
-            fila.style.display = "none"
-        }
+        fila.style.display = contenido.includes(texto) ? "" : "none";
 
-    })
+    });
 
-})
+});
 
 </script>
 

@@ -10,6 +10,9 @@ app.config["UPLOAD_FOLDER"] = CARPETA
 
 os.makedirs(CARPETA, exist_ok=True)
 
+# productos en memoria
+productos = []
+
 
 @app.route("/")
 def inicio():
@@ -27,11 +30,9 @@ def login():
         if correo == "admin@gmail.com" and clave == "123456":
 
             session["correo"] = correo
-
             return redirect("/panel-admin")
 
         flash("Correo o contraseña incorrectos")
-
         return redirect("/login")
 
     return render_template("login.html")
@@ -50,9 +51,6 @@ def panel_admin():
 def logout():
 
     session.clear()
-
-    flash("Sesión cerrada correctamente")
-
     return redirect("/login")
 
 
@@ -65,19 +63,6 @@ def registrar_producto():
     return render_template("registrar_producto.html")
 
 
-@app.route("/ver-productos")
-def ver_productos():
-
-    if "correo" not in session:
-        return redirect("/login")
-
-    return render_template("ver_productos.html")
-
-
-# =========================
-# GUARDADO TEMPORAL
-# =========================
-
 @app.route("/guardar", methods=["POST"])
 def guardar():
 
@@ -88,14 +73,23 @@ def guardar():
     precio = request.form["precio"]
     stock = request.form["stock"]
 
-    print("Producto:")
-    print(nombre)
-    print(precio)
-    print(stock)
+    productos.append({
+        "nombre": nombre,
+        "precio": precio,
+        "stock": stock
+    })
 
     flash("Producto registrado correctamente")
-
     return redirect("/registrar-producto")
+
+
+@app.route("/ver-productos")
+def ver_productos():
+
+    if "correo" not in session:
+        return redirect("/login")
+
+    return render_template("ver_productos.html", productos=productos)
 
 
 if __name__ == "__main__":
