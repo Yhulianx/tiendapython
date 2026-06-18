@@ -13,37 +13,11 @@ body{
     min-height:100vh;
 
     background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(96,165,250,0.35) 0%,
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(167,139,250,0.32) 0%,
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 20% 85%,
-            rgba(56,189,248,0.25) 0%,
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(192,132,252,0.22) 0%,
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 60% 60%,
-            rgba(148,163,184,0.12) 0%,
-            transparent 40%
-        ),
-
+        radial-gradient(circle at 15% 20%, rgba(96,165,250,0.35), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(167,139,250,0.32), transparent 35%),
+        radial-gradient(circle at 20% 85%, rgba(56,189,248,0.25), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(192,132,252,0.22), transparent 30%),
+        radial-gradient(circle at 60% 60%, rgba(148,163,184,0.12), transparent 40%),
         linear-gradient(
             135deg,
             #ffffff 0%,
@@ -70,8 +44,6 @@ header{
 
     background:transparent;
 }
-
-/* Línea divisora elegante */
 
 header::after{
     content:"";
@@ -105,55 +77,18 @@ header::after{
 .logo-img{
     width:55px;
     height:55px;
-
     object-fit:contain;
-
-    display:block;
 }
 
 .logo{
     font-size:32px;
     font-weight:700;
     color:#111;
-
-    letter-spacing:1px;
-}
-
-/* =========================
-   BOTÓN LOGIN
-========================= */
-
-.btn-login{
-    text-decoration:none;
-
-    background:#111;
-    color:white;
-
-    padding:14px 30px;
-
-    border-radius:14px;
-
-    font-size:16px;
-    font-weight:600;
-
-    transition:.3s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.btn-login:hover{
-    background:#222;
-
-    transform:translateY(-3px);
-
-    box-shadow:0 12px 25px rgba(0,0,0,.12);
 }
 
 /* =========================
    HERO
 ========================= */
-
-/* HERO */
 
 .hero{
     height:calc(100vh - 95px);
@@ -169,14 +104,11 @@ header::after{
 
 .hero-content{
     max-width:950px;
-    overflow:visible;
 }
 
 .subtitulo{
     color:#6d6d6d;
-
     font-size:14px;
-
     letter-spacing:4px;
 }
 
@@ -216,217 +148,10 @@ header::after{
     margin-left:auto;
     margin-right:auto;
 }
+
 /* =========================
-   BOTÓN PRINCIPAL
+   LOGIN
 ========================= */
-
-.btn-principal{
-    display:inline-block;
-
-    margin-top:50px;
-
-    text-decoration:none;
-
-    background:#111;
-    color:white;
-
-    padding:18px 40px;
-
-    border-radius:14px;
-
-    font-size:18px;
-    font-weight:600;
-
-    transition:.3s;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.btn-principal:hover{
-    transform:translateY(-4px);
-
-    background:#222;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
-}
-/* ================= LOGIN ================= */
-
-/* ================= LOGIN ================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    min-height:100vh;
-
-    background:
-        radial-gradient(circle at 15% 20%, rgba(96,165,250,0.35), transparent 35%),
-        radial-gradient(circle at 85% 15%, rgba(167,139,250,0.30), transparent 35%),
-        radial-gradient(circle at 20% 85%, rgba(56,189,248,0.25), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(192,132,252,0.25), transparent 30%),
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f5f7ff 35%,
-            #faf7ff 70%,
-            #ffffff 100%
-        );
-
-    background-attachment:fixed;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:relative;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:25px 80px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(96,165,250,0.12),
-            rgba(167,139,250,0.12)
-        );
-
-    backdrop-filter:blur(20px);
-
-    border-bottom:1px solid rgba(120,120,120,.20);
-}
-
-.logo-container{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo-img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-}
-
-.logo{
-    font-size:32px;
-    font-weight:800;
-    color:#111;
-}
-
-.btn-login{
-    text-decoration:none;
-
-    background:#111;
-    color:white;
-
-    padding:14px 30px;
-
-    border-radius:14px;
-
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.btn-login:hover{
-    background:#222;
-    transform:translateY(-2px);
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    height:calc(100vh - 100px);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:20px;
-}
-
-.hero-content{
-    max-width:1100px;
-}
-
-.subtitulo{
-    letter-spacing:5px;
-    color:#666;
-    font-size:14px;
-}
-
-.hero-content h1{
-
-    margin-top:20px;
-
-    font-size:90px;
-
-    line-height:1.05;
-
-    font-weight:800;
-
-    color:#111;
-
-    padding-bottom:15px;
-}
-
-.hero-content p{
-
-    max-width:750px;
-
-    margin:25px auto 0;
-
-    font-size:24px;
-
-    line-height:1.7;
-
-    color:#555;
-}
-
-.btn-principal{
-
-    display:inline-block;
-
-    margin-top:70px;
-
-    text-decoration:none;
-
-    background:#111;
-
-    color:white;
-
-    padding:18px 42px;
-
-    border-radius:15px;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.btn-principal:hover{
-
-    transform:translateY(-4px);
-
-    background:#222;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
-}
-
-/* ================= LOGIN ================= */
 
 .login-page{
     min-height:100vh;
@@ -434,19 +159,6 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background:
-        radial-gradient(circle at 15% 20%, rgba(96,165,250,.35), transparent 35%),
-        radial-gradient(circle at 85% 15%, rgba(167,139,250,.30), transparent 35%),
-        radial-gradient(circle at 20% 85%, rgba(56,189,248,.25), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(192,132,252,.25), transparent 30%),
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f4f7ff,
-            #faf7ff,
-            #ffffff
-        );
 }
 
 .login-card{
@@ -470,13 +182,9 @@ header{
 }
 
 .logo-login img{
-
     width:90px;
-
     height:auto;
-
     display:block;
-
     margin:0 auto 15px;
 }
 
@@ -535,53 +243,6 @@ header{
         0 0 0 4px rgba(124,156,255,.15);
 }
 
-.login-card button{
-
-    width:100%;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#111;
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.login-card button:hover{
-
-    background:#222;
-
-    transform:translateY(-3px);
-}
-
-.volver{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    text-decoration:none;
-
-    color:#555;
-
-    font-weight:500;
-}
-
-.volver:hover{
-
-    color:#111;
-}
 .mensaje-error{
     background:#fee2e2;
     color:#b91c1c;
@@ -591,78 +252,146 @@ header{
     margin-bottom:20px;
     font-size:14px;
 }
-/* PANEL ADMIN */
+
+.volver{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+}
+
+.volver:hover{
+    color:#111;
+}
+/* =========================
+   BOTONES UNIVERSALES
+========================= */
+
+.btn-login,
+.btn-principal,
+.btn-volver,
+.btn-salir,
+.login-card button,
+.registro-card button{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    min-width:220px;
+    height:58px;
+
+    padding:0 30px;
+
+    background:#111;
+    color:white;
+
+    text-decoration:none;
+
+    border:none;
+    border-radius:14px;
+
+    font-size:17px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+}
+
+.btn-login:hover,
+.btn-principal:hover,
+.btn-volver:hover,
+.btn-salir:hover,
+.login-card button:hover,
+.registro-card button:hover{
+
+    background:#222;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.12);
+}
+
+/* =========================
+   PANEL ADMIN
+========================= */
 
 .panel-container{
-    max-width:1200px;
-    margin:auto;
-    padding:50px;
+    width:90%;
+    max-width:1300px;
+    margin:50px auto;
 }
 
 .panel-header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .panel-header h1{
     font-size:42px;
     color:#111;
-}
-
-.panel-header p{
-    color:#666;
-    margin-top:8px;
-}
-
-.btn-salir{
-    text-decoration:none;
-    background:#111;
-    color:white;
-    padding:14px 24px;
-    border-radius:12px;
+    font-weight:700;
 }
 
 .panel-cards{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
-.panel-card{
-    text-decoration:none;
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(15px);
+.card-admin{
 
-    padding:40px;
+    text-decoration:none;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(20px);
 
     border-radius:24px;
 
-    border:1px solid rgba(0,0,0,.08);
+    padding:35px;
+
+    color:#111;
 
     transition:.3s;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
 }
 
-.panel-card:hover{
-    transform:translateY(-6px);
+.card-admin:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.10);
 }
 
-.panel-card h2{
-    font-size:50px;
-    margin-bottom:20px;
-}
+.card-admin h2{
 
-.panel-card h3{
-    color:#111;
     margin-bottom:15px;
+
+    font-size:28px;
 }
 
-.panel-card p{
+.card-admin p{
+
     color:#666;
-    line-height:1.6;
+
+    line-height:1.7;
 }
-/* ================= VER PRODUCTOS ================= */
+
+/* =========================
+   VER PRODUCTOS
+========================= */
 
 .productos-container{
     width:90%;
@@ -682,42 +411,42 @@ header{
     color:#111;
 }
 
-.btn-volver{
-    text-decoration:none;
-    background:#111;
-    color:white;
-    padding:14px 28px;
-    border-radius:12px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn-volver:hover{
-    transform:translateY(-2px);
-    background:#222;
-}
-
 .buscador-box{
     margin-bottom:25px;
 }
 
 #buscador{
+
     width:100%;
-    padding:16px 20px;
+
+    padding:18px;
+
     border:none;
+
     border-radius:14px;
-    background:rgba(255,255,255,0.7);
-    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
     font-size:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.05);
 }
 
 .tabla-container{
-    background:rgba(255,255,255,0.55);
+
+    background:rgba(255,255,255,.55);
+
     backdrop-filter:blur(20px);
+
     border-radius:20px;
+
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
 }
 
 table{
@@ -742,86 +471,125 @@ td{
 }
 
 tr:hover{
-    background:rgba(255,255,255,0.5);
+    background:rgba(255,255,255,.5);
 }
 
 .img-producto{
+
     width:80px;
     height:80px;
+
     object-fit:cover;
-    border-radius:10px;
+
+    border-radius:12px;
 }
-/* ================= REGISTRAR PRODUCTO ================= */
+
+/* =========================
+   REGISTRAR PRODUCTO
+========================= */
 
 .registro-container{
-width:90%;
-max-width:1000px;
-margin:50px auto;
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
 }
 
 .registro-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
 }
 
 .registro-header h1{
-font-size:42px;
-color:#111;
+    font-size:42px;
+    color:#111;
 }
 
 .registro-card{
-background:rgba(255,255,255,0.55);
-backdrop-filter:blur(20px);
-border-radius:24px;
-padding:40px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
 }
 
 .registro-card form{
-display:flex;
-flex-direction:column;
-gap:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
 }
 
 .registro-card input{
-width:100%;
-padding:18px;
-border:none;
-border-radius:14px;
-background:rgba(255,255,255,0.8);
-font-size:16px;
-box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.8);
+
+    font-size:16px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.05);
 }
 
 .registro-card input:focus{
-outline:none;
-transform:scale(1.01);
-}
-
-.registro-card button{
-padding:18px;
-border:none;
-border-radius:14px;
-background:#111;
-color:white;
-font-size:17px;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
-}
-
-.registro-card button:hover{
-background:#222;
-transform:translateY(-3px);
+    outline:none;
 }
 
 .mensaje-exito{
-background:#d1fae5;
-color:#065f46;
-padding:15px;
-border-radius:12px;
-margin-bottom:20px;
-font-weight:600;
+
+    background:#d1fae5;
+
+    color:#065f46;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .panel-header,
+    .productos-header,
+    .registro-header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .btn-login,
+    .btn-principal,
+    .btn-volver,
+    .btn-salir{
+        width:100%;
+    }
 }
